@@ -1,0 +1,24 @@
+{
+  "name": "autologinpsuwifi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pkorawit/autologinpsuwifi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pkorawit/autologinpsuwifi/issues"
+  },
+  "homepage": "https://github.com/pkorawit/autologinpsuwifi#readme",
+  "dependencies": {
+    "axios": "^0.17.1",
+    "request": "^2.83.0"
+  }
+}

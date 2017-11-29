@@ -1,0 +1,103 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>User Identification Portal</title>
+<style type="text/css">
+        body { color: #111; font-family: Verdana,Arial,Helvetica,sans-serif;  margin-top: 0}
+        #bodybackground{ width: 100%; height: 100%;  text-align: center; }
+        #loginpanel { background: url("login_hy_medium.png") no-repeat; width:820px; height:584px; margin-left: auto; margin-right: auto; }
+        #desc { position:relative; width: 500px; height: 80px; top:340px; left:50px; font-size: 11px; font-weight: bold; text-align: left; background-color:transparent; line-height: 18px;}
+        * html #desc { left:-92px; }
+        #formdiv {position:relative; width: 400px; height: 78px; top:330px; left:50px; text-align: left;}
+        * html #formdiv { left:-140px; }
+        a,a:visited {color:blue; font-weight: bold; text-decoration: none;}
+        a:hover {color:#ff5544;}
+        form td, form input { font-size: 11px; font-weight: bold;}
+        #formtable {height: 100%;width: 100%;}
+        #formtd {vertical-align: middle;}
+		
+div.dialog {
+	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 12px;
+	border:2px solid #d1d1d1;
+	padding:10px 20px;
+	text-align:center;
+	background: white;
+}
+table.center {
+	margin: auto;
+}
+th {
+	font-size: 14px;
+	color: #083772;
+}
+.center{
+	text-align: center;
+}
+.label {
+	text-align: left;
+}
+
+td {
+	font-size: 12px;
+	color: gray;
+	white-space: nowrap;
+}
+		
+</style>
+</head>
+
+<body>
+<script type='text/javascript'>
+function getip6() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+     document.getElementById("ipv6-show").innerHTML = xhttp.responseText;
+     document.getElementById("ipv6").value = xhttp.responseText;
+    }
+  };
+  xhttp.open("GET", "https://server-dev.psu.ac.th:8444", true);
+  xhttp.send();
+}
+getip6();
+</script>
+
+    <div id="bodybackground">
+        <div id="loginpanel">
+            <div id="formdiv">
+	<form name='login' action='https://cp-xml-40g.psu.ac.th:6082/php/uid.php' method='POST'><table><tr><td class='label'>User    </td><td><input name='username' size='18' type='text' /></tr><tr><td class='label'>Password</td><td><input name='password' size='18' type='password' /></tr><input type='hidden' name='ipv6' id='ipv6'><tr><td class='center' colspan='2'><input type='submit' name='login' value='Login'></td></tr></table><script type='text/javascript'>function focusme() {document.login.username.focus();} window.onload=focusme;</script>			
+	        </div>
+            <div id="desc">
+                <iframe src="https://server-dev.psu.ac.th/banner.php?width=400" width="400" height="40" frameborder=0 scrolling="no" allowtransparency="true"></iframe><br>
+                Before surfing the Internet, please login with <a href="http://passport.psu.ac.th">PSU Passport</a>.<br>
+                For any problem, call 2129, 2101<br>
+		or mail to <a href="http://netserv.cc.psu.ac.th/index.php/contact-us">netadmin@psu.ac.th</a><br>
+
+		<br><br>server ip = 10.126.0.4&nbsp&nbsp&nbsp&nbspuser ipv4&nbsp&nbsp= 172.19.137.22&nbsp&nbsp&nbsp&nbsp<br>user ipv6&nbsp&nbsp= <span id='ipv6-show'></span>				
+                <!-- You can read the news about Network or Internet at <a href="http://netserv.cc.psu.ac.th/index.php?format=feed&type=rss">Net News.</a><br> -->
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
